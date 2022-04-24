@@ -23,7 +23,19 @@
     <artifactId>whistlepost-launcher</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <name>whistlepost-launcher</name>
-    <description>org.whistlepost - whistlepost-feature-model</description>
+    <description>Launch configurations for the Whistlepost platform</description>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <slingfeature-maven-plugin.version>1.4.2</slingfeature-maven-plugin.version>
+        <sling-kickstart-maven-plugin.version>0.0.8</sling-kickstart-maven-plugin.version>
+        <felix.version>6.0.3</felix.version>
+        <whistlepost.version>2.0.0-alpha1-SNAPSHOT</whistlepost.version>
+        <groovy.version>3.0.9</groovy.version>
+        <oak.version>1.26.0</oak.version>
+        <keycloak.version>10.0.2</keycloak.version>
+        <jackson.version>2.12.0</jackson.version>
+        <thymeleaf.version>3.0.15.RELEASE_1</thymeleaf.version>
+    </properties>
     <build>
         <plugins>
             <plugin>
@@ -283,6 +295,12 @@
             </snapshots>
         </repository>
     </repositories>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
     <profiles>
         <profile>
             <id>autoInstallBundle</id>
@@ -346,16 +364,4 @@
             </build>
         </profile>
     </profiles>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <slingfeature-maven-plugin.version>1.4.2</slingfeature-maven-plugin.version>
-        <sling-kickstart-maven-plugin.version>0.0.8</sling-kickstart-maven-plugin.version>
-        <felix.version>6.0.3</felix.version>
-        <whistlepost.version>2.0.0-alpha1-SNAPSHOT</whistlepost.version>
-        <groovy.version>3.0.9</groovy.version>
-        <oak.version>1.26.0</oak.version>
-        <keycloak.version>10.0.2</keycloak.version>
-        <jackson.version>2.12.0</jackson.version>
-        <thymeleaf.version>3.0.15.RELEASE_1</thymeleaf.version>
-    </properties>
 </project>
