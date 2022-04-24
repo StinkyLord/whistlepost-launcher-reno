@@ -1,0 +1,13 @@
+{
+    "configurations":{
+        "org.apache.sling.commons.log.LogManager.factory.config~access.log": {
+            "org.apache.sling.commons.log.file": ""
+        },
+        "org.apache.sling.commons.log.LogManager.factory.config~request.log": {
+            "org.apache.sling.commons.log.file": ""
+        },
+        "org.apache.sling.commons.log.LogManager.factory.writer~wp": {
+            "org.apache.sling.commons.log.file": ""
+        }
+    }
+}

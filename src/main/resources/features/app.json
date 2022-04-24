@@ -1,0 +1,16 @@
+{
+  "bundles": [
+    {
+      "id": "org.whistlepost:whistlepost-core:${whistlepost.version}",
+      "start-order": "20"
+    },
+    {
+      "id": "org.whistlepost:whistlepost-app:${whistlepost.version}",
+      "start-order": "20"
+    },
+    {
+      "id": "org.whistlepost:whistlepost-content:${whistlepost.version}",
+      "start-order": "15"
+    }
+  ]
+}

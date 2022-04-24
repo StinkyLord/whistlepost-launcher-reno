@@ -1,0 +1,34 @@
+{
+  "bundles": [
+    {
+      "id": "org.whistlepost:whistlepost-core:${whistlepost.version}",
+      "start-order": "20"
+    }
+  ],
+  "configurations": {
+    "org.apache.sling.fsprovider.internal.FsResourceProvider~assets": {
+      "provider.file": "/Users/fortuna/Development/whistlepost/whistlepost/whistlepost-app/src/main/resources/assets",
+      "provider.root": "/assets/wp",
+      "provider.fs.mode": "FILES_FOLDERS",
+      "provider.initial.content.import.options": "overwrite",
+      "provider.checkinterval": "1000",
+      "provider.cache.size": "10000"
+    },
+    "org.apache.sling.fsprovider.internal.FsResourceProvider~content": {
+      "provider.file": "/Users/fortuna/Development/whistlepost/whistlepost/whistlepost-content/src/main/resources/SLING-INF/content/content",
+      "provider.root": "/content",
+      "provider.fs.mode": "INITIAL_CONTENT",
+      "provider.initial.content.import.options": "overwrite",
+      "provider.checkinterval": "1000",
+      "provider.cache.size": "10000"
+    },
+    "org.apache.sling.fsprovider.internal.FsResourceProvider~app": {
+      "provider.file": "/Users/fortuna/Development/whistlepost/whistlepost/whistlepost-app/src/main/resources/SLING-INF/content",
+      "provider.root": "/apps/wp",
+      "provider.fs.mode": "FILES_FOLDERS",
+      "provider.initial.content.import.options": "overwrite",
+      "provider.checkinterval": "1000",
+      "provider.cache.size": "10000"
+    }
+  }
+}
