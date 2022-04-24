@@ -74,7 +74,7 @@
                 <version>${slingfeature-maven-plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <features>src/main/resources/features</features>
+                    <features>src/main/features</features>
 <!--                    <featuresExcludes>logging.json</featuresExcludes>-->
 <!--                    <featuresExcludes>logging-stdout.json</featuresExcludes>-->
                     <replacePropertyVariables>whistlepost.version,groovy.version,keycloak.version,jackson.version,thymeleaf.version</replacePropertyVariables>
