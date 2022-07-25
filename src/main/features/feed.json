@@ -1,0 +1,12 @@
+{
+  "bundles": [
+    {
+      "id": "com.rometools:rome:${rome.version}",
+      "start-order": "20"
+    },
+    {
+      "id": "org.apache.servicemix.bundles:org.apache.servicemix.bundles.jdom:2.0.6.1_1",
+      "start-order": "20"
+    }
+  ]
+}
