@@ -1,7 +1,10 @@
 SHELL:=/bin/bash
 include .env
 
-.PHONY: all build launch
+.PHONY: all clean build launch
+
+clean:
+	mvn clean
 
 build:
 	mvn verify
