@@ -3,6 +3,10 @@
     {
       "id": "org.apache.servicemix.bundles:org.apache.servicemix.bundles.thymeleaf:${thymeleaf.version}",
       "start-order": "20"
+    },
+    {
+      "id": "org.apache.servicemix.bundles:org.apache.servicemix.bundles.ognl:${ognl.version}",
+      "start-order": "20"
     }
   ]
 }

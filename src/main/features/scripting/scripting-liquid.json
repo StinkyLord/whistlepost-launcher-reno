@@ -1,7 +1,7 @@
 {
   "bundles": [
     {
-      "id": "org.jsoup:jsoup:1.14.3",
+      "id": "org.jsoup:jsoup:${jsoup.version}",
       "start-order": "20"
     },
     {

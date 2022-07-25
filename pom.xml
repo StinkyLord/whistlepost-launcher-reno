@@ -33,8 +33,13 @@
         <groovy.version>3.0.9</groovy.version>
         <oak.version>1.26.0</oak.version>
         <keycloak.version>10.0.2</keycloak.version>
-        <jackson.version>2.12.0</jackson.version>
-        <thymeleaf.version>3.0.15.RELEASE_1</thymeleaf.version>
+        <jackson.version>2.13.0</jackson.version>
+        <thymeleaf.version>3.0.12.RELEASE_1</thymeleaf.version>
+<!--        <thymeleaf.version>3.0.16-SNAPSHOT</thymeleaf.version>-->
+<!--        <ognl.version>3.1.26</ognl.version>-->
+        <ognl.version>3.2.1_1</ognl.version>
+        <rome.version>1.18.0</rome.version>
+        <jsoup.version>1.15.1</jsoup.version>
     </properties>
     <build>
         <plugins>
@@ -86,10 +91,12 @@
                 <version>${slingfeature-maven-plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <features>src/main/features</features>
 <!--                    <featuresExcludes>logging.json</featuresExcludes>-->
 <!--                    <featuresExcludes>logging-stdout.json</featuresExcludes>-->
-                    <replacePropertyVariables>whistlepost.version,groovy.version,keycloak.version,jackson.version,thymeleaf.version</replacePropertyVariables>
+                    <replacePropertyVariables>
+                        whistlepost.version,groovy.version,keycloak.version,jackson.version,thymeleaf.version,
+                        ognl.version,rome.version,jsoup.version
+                    </replacePropertyVariables>
                     <framework>
                         <groupId>org.apache.felix</groupId>
                         <artifactId>org.apache.felix.framework</artifactId>
@@ -99,7 +106,7 @@
                         <aggregate>
                             <classifier>whistlepost</classifier>
                             <filesInclude>**/*.json</filesInclude>
-                            <filesExclude>scripting/scripting-thymeleaf.json</filesExclude>
+<!--                            <filesExclude>scripting/scripting-thymeleaf.json</filesExclude>-->
                             <filesExclude>logging.json</filesExclude>
                             <filesExclude>logging-stdout.json</filesExclude>
                             <filesExclude>applocal.json</filesExclude>
@@ -108,6 +115,7 @@
                                 <artifactsOverride>org.antlr:antlr4-runtime:4.9.1</artifactsOverride>
                                 <artifactsOverride>org.javassist:javassist:3.28.0-GA</artifactsOverride>
                                 <artifactsOverride>org.apache.servicemix.bundles:org.apache.servicemix.bundles.thymeleaf:${thymeleaf.version}</artifactsOverride>
+                                <artifactsOverride>org.apache.servicemix.bundles:org.apache.servicemix.bundles.ognl:${ognl.version}</artifactsOverride>
                                 <artifactsOverride>org.apache.httpcomponents:httpclient-osgi:4.5.11</artifactsOverride>
                                 <artifactsOverride>org.apache.httpcomponents:httpcore-osgi:4.4.13</artifactsOverride>
                                 <artifactsOverride>com.fasterxml.jackson.core:jackson-core:${jackson.version}</artifactsOverride>
@@ -119,7 +127,7 @@
                         <aggregate>
                             <classifier>local</classifier>
                             <filesInclude>**/*.json</filesInclude>
-                            <filesExclude>scripting/scripting-thymeleaf.json</filesExclude>
+<!--                            <filesExclude>scripting/scripting-thymeleaf.json</filesExclude>-->
                             <filesExclude>logging.json</filesExclude>
                             <filesExclude>logging-stdout.json</filesExclude>
                             <filesExclude>app.json</filesExclude>
@@ -128,6 +136,7 @@
                                 <artifactsOverride>org.antlr:antlr4-runtime:4.9.1</artifactsOverride>
                                 <artifactsOverride>org.javassist:javassist:3.28.0-GA</artifactsOverride>
                                 <artifactsOverride>org.apache.servicemix.bundles:org.apache.servicemix.bundles.thymeleaf:${thymeleaf.version}</artifactsOverride>
+                                <artifactsOverride>org.apache.servicemix.bundles:org.apache.servicemix.bundles.ognl:${ognl.version}</artifactsOverride>
                                 <artifactsOverride>org.apache.httpcomponents:httpclient-osgi:4.5.11</artifactsOverride>
                                 <artifactsOverride>org.apache.httpcomponents:httpcore-osgi:4.4.13</artifactsOverride>
                                 <artifactsOverride>com.fasterxml.jackson.core:jackson-core:${jackson.version}</artifactsOverride>
@@ -290,6 +299,13 @@
         <repository>
             <id>maven-snapshots</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <snapshots>
+<!--                <updatePolicy>always</updatePolicy>-->
+            </snapshots>
+        </repository>
+        <repository>
+            <id>apache-snapshots</id>
+            <url>https://repository.apache.org/snapshots</url>
             <snapshots>
 <!--                <updatePolicy>always</updatePolicy>-->
             </snapshots>
