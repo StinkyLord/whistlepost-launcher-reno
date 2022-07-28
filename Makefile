@@ -3,11 +3,14 @@ include .env
 
 .PHONY: all clean build launch
 
+mvnw:
+	./mvnw wrapper:wrapper
+
 clean:
-	mvn clean
+	./mvnw clean
 
 build:
-	mvn verify
+	./mvnw verify
 
 launch:
 	java -jar target/dependency/org.apache.sling.feature.launcher.jar \
