@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  whistlepost:
+    image: micronode/whistlepost:amd64
+    ports:
+      - 8080:8080
+    volumes:
+      - repository:/opt/whistlepost/launcher/repository
+
+volumes:
+  repository:
