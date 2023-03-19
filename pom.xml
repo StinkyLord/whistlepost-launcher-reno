@@ -32,7 +32,7 @@
         <whistlepost.version>2.0.0-alpha2-SNAPSHOT</whistlepost.version>
         <whistlepost-caconfig.version>0.1.0</whistlepost-caconfig.version>
         <whistlepost-purecss.version>0.1.0-SNAPSHOT</whistlepost-purecss.version>
-        <whistlepost-i18n.version>0.1.0-SNAPSHOT</whistlepost-i18n.version>
+        <whistlepost-i18n.version>0.1.0</whistlepost-i18n.version>
         <whistlepost-console.version>0.1.0-SNAPSHOT</whistlepost-console.version>
         <whistlepost-services.version>0.1.0</whistlepost-services.version>
         <whistlepost-scripting-groovy.version>0.1.0</whistlepost-scripting-groovy.version>
