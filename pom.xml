@@ -26,10 +26,17 @@
     <description>Launch configurations for the Whistlepost platform</description>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <slingfeature-maven-plugin.version>1.4.2</slingfeature-maven-plugin.version>
+        <slingfeature-maven-plugin.version>1.6.6</slingfeature-maven-plugin.version>
         <sling-kickstart-maven-plugin.version>0.0.8</sling-kickstart-maven-plugin.version>
-        <felix.version>6.0.3</felix.version>
-        <whistlepost.version>2.0.0-alpha1-SNAPSHOT</whistlepost.version>
+        <felix.version>7.0.5</felix.version>
+        <whistlepost.version>2.0.0-alpha2-SNAPSHOT</whistlepost.version>
+        <whistlepost-caconfig.version>0.1.0</whistlepost-caconfig.version>
+        <whistlepost-purecss.version>0.1.0-SNAPSHOT</whistlepost-purecss.version>
+        <whistlepost-i18n.version>0.1.0-SNAPSHOT</whistlepost-i18n.version>
+        <whistlepost-console.version>0.1.0-SNAPSHOT</whistlepost-console.version>
+        <whistlepost-services.version>0.1.0</whistlepost-services.version>
+        <whistlepost-scripting-groovy.version>0.1.0</whistlepost-scripting-groovy.version>
+        <whistlepost-scripting-liquid.version>0.1.2</whistlepost-scripting-liquid.version>
         <groovy.version>3.0.9</groovy.version>
         <oak.version>1.26.0</oak.version>
         <keycloak.version>10.0.2</keycloak.version>
@@ -94,8 +101,10 @@
 <!--                    <featuresExcludes>logging.json</featuresExcludes>-->
 <!--                    <featuresExcludes>logging-stdout.json</featuresExcludes>-->
                     <replacePropertyVariables>
-                        whistlepost.version,groovy.version,keycloak.version,jackson.version,thymeleaf.version,
-                        ognl.version,rome.version,jsoup.version
+                        whistlepost.version,whistlepost-caconfig.version,whistlepost-purecss.version,whistlepost-i18n.version,whistlepost-console.version,whistlepost-services.version,whistlepost-scripting-groovy.version,
+                        whistlepost-scripting-liquid.version, groovy.version,keycloak.version,jackson.version,
+                        whistlepost-scripting-liquid.version, groovy.version,keycloak.version,jackson.version,
+                        thymeleaf.version, ognl.version,rome.version,jsoup.version
                     </replacePropertyVariables>
                     <framework>
                         <groupId>org.apache.felix</groupId>
@@ -107,6 +116,7 @@
                             <classifier>whistlepost</classifier>
                             <filesInclude>**/*.json</filesInclude>
 <!--                            <filesExclude>scripting/scripting-thymeleaf.json</filesExclude>-->
+                            <filesExclude>aws.json</filesExclude>
                             <filesExclude>logging.json</filesExclude>
                             <filesExclude>logging-stdout.json</filesExclude>
                             <filesExclude>applocal.json</filesExclude>
@@ -122,12 +132,17 @@
                                 <artifactsOverride>com.fasterxml.jackson.core:jackson-annotations:${jackson.version}</artifactsOverride>
                                 <artifactsOverride>com.fasterxml.jackson.core:jackson-databind:${jackson.version}</artifactsOverride>
                                 <artifactsOverride>org.codehaus.groovy:groovy:${groovy.version}</artifactsOverride>
+                                <artifactsOverride>org.codehaus.groovy:groovy-jsr223:${groovy.version}</artifactsOverride>
+                                <artifactsOverride>org.codehaus.groovy:groovy-json:${groovy.version}</artifactsOverride>
+                                <artifactsOverride>org.codehaus.groovy:groovy-templates:${groovy.version}</artifactsOverride>
+                                <artifactsOverride>org.apache.sling:org.apache.sling.models.caconfig:1.0.2</artifactsOverride>
                             </artifactsOverrides>
                         </aggregate>
                         <aggregate>
                             <classifier>local</classifier>
                             <filesInclude>**/*.json</filesInclude>
 <!--                            <filesExclude>scripting/scripting-thymeleaf.json</filesExclude>-->
+                            <filesExclude>aws.json</filesExclude>
                             <filesExclude>logging.json</filesExclude>
                             <filesExclude>logging-stdout.json</filesExclude>
                             <filesExclude>app.json</filesExclude>
@@ -143,12 +158,14 @@
                                 <artifactsOverride>com.fasterxml.jackson.core:jackson-annotations:${jackson.version}</artifactsOverride>
                                 <artifactsOverride>com.fasterxml.jackson.core:jackson-databind:${jackson.version}</artifactsOverride>
                                 <artifactsOverride>org.codehaus.groovy:groovy:${groovy.version}</artifactsOverride>
+                                <artifactsOverride>org.apache.sling:org.apache.sling.models.caconfig:1.0.2</artifactsOverride>
                             </artifactsOverrides>
                         </aggregate>
                         <aggregate>
                             <classifier>docker</classifier>
                             <filesInclude>**/*.json</filesInclude>
                             <filesExclude>scripting/scripting-thymeleaf.json</filesExclude>
+                            <filesExclude>aws.json</filesExclude>
                             <filesExclude>logging.json</filesExclude>
                             <filesExclude>logging-stdout.json</filesExclude>
                             <filesExclude>applocal.json</filesExclude>
@@ -163,6 +180,7 @@
                                 <artifactsOverride>com.fasterxml.jackson.core:jackson-annotations:${jackson.version}</artifactsOverride>
                                 <artifactsOverride>com.fasterxml.jackson.core:jackson-databind:${jackson.version}</artifactsOverride>
                                 <artifactsOverride>org.codehaus.groovy:groovy:${groovy.version}</artifactsOverride>
+                                <artifactsOverride>org.apache.sling:org.apache.sling.models.caconfig:1.0.2</artifactsOverride>
                             </artifactsOverrides>
                         </aggregate>
                     </aggregates>

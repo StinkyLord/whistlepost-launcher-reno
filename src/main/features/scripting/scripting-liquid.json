@@ -9,7 +9,7 @@
       "start-order": "20"
     },
     {
-      "id": "org.whistlepost:whistlepost-scripting-liquid:${whistlepost.version}",
+      "id": "org.whistlepost:whistlepost-scripting-liquid:${whistlepost-scripting-liquid.version}",
       "start-order": "20"
     }
   ],

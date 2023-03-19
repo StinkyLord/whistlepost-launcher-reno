@@ -9,11 +9,15 @@
       "start-order": "20"
     },
     {
-      "id": "org.mnode.ical4j:ical4j:4.0.0-alpha2",
+      "id": "org.mnode.ical4j:ical4j:4.0.0-beta1",
       "start-order": "20"
     },
     {
-      "id": "org.threeten:threeten-extra:1.5.0",
+      "id": "org.threeten:threeten-extra:1.7.0",
+      "start-order": "20"
+    },
+    {
+      "id": "org.jooq:jool-java-8:0.9.14",
       "start-order": "20"
     },
     {
@@ -25,7 +29,15 @@
       "start-order": "20"
     },
     {
-      "id": "org.whistlepost:whistlepost-icalendar:${whistlepost.version}",
+      "id": "commons-validator:commons-validator:1.7",
+      "start-order": "20"
+    },
+    {
+      "id": "commons-digester:commons-digester:2.1",
+      "start-order": "20"
+    },
+    {
+      "id": "org.apache.servicemix.bundles:org.apache.servicemix.bundles.commons-beanutils:1.8.3_2",
       "start-order": "20"
     }
   ]

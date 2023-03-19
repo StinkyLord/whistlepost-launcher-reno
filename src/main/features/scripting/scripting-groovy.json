@@ -21,7 +21,7 @@
       "start-order": "20"
     },
     {
-      "id": "org.whistlepost:whistlepost-scripting-groovy:${whistlepost.version}",
+      "id": "org.whistlepost:whistlepost-scripting-groovy:${whistlepost-scripting-groovy.version}",
       "start-order": "20"
     }
   ]

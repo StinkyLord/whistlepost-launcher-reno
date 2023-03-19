@@ -1,31 +1,23 @@
 {
   "bundles": [
     {
-      "id": "org.whistlepost:whistlepost-servlet:${whistlepost.version}",
+      "id": "org.whistlepost:whistlepost:${whistlepost.version}",
       "start-order": "20"
     },
     {
-      "id": "org.whistlepost:whistlepost-model:${whistlepost.version}",
+      "id": "org.whistlepost:whistlepost-caconfig:${whistlepost-caconfig.version}",
       "start-order": "20"
     },
     {
-      "id": "org.whistlepost:whistlepost-model-http:${whistlepost.version}",
+      "id": "org.whistlepost:whistlepost-purecss:${whistlepost-purecss.version}",
       "start-order": "20"
     },
     {
-      "id": "org.whistlepost:whistlepost-models-pages:${whistlepost.version}",
+      "id": "org.whistlepost:whistlepost-i18n:${whistlepost-i18n.version}",
       "start-order": "20"
     },
     {
-      "id": "org.whistlepost:whistlepost-app:${whistlepost.version}",
-      "start-order": "20"
-    },
-    {
-      "id": "org.whistlepost:whistlepost-i18n:${whistlepost.version}",
-      "start-order": "20"
-    },
-    {
-      "id": "org.whistlepost:whistlepost-content:${whistlepost.version}",
+      "id": "org.whistlepost:whistlepost-console:${whistlepost-console.version}",
       "start-order": "15"
     }
   ]
