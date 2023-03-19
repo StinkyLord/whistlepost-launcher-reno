@@ -116,7 +116,7 @@
                             <classifier>whistlepost</classifier>
                             <filesInclude>**/*.json</filesInclude>
 <!--                            <filesExclude>scripting/scripting-thymeleaf.json</filesExclude>-->
-                            <filesExclude>aws.json</filesExclude>
+<!--                            <filesExclude>aws.json</filesExclude>-->
                             <filesExclude>logging.json</filesExclude>
                             <filesExclude>logging-stdout.json</filesExclude>
                             <filesExclude>applocal.json</filesExclude>
@@ -142,7 +142,7 @@
                             <classifier>local</classifier>
                             <filesInclude>**/*.json</filesInclude>
 <!--                            <filesExclude>scripting/scripting-thymeleaf.json</filesExclude>-->
-                            <filesExclude>aws.json</filesExclude>
+<!--                            <filesExclude>aws.json</filesExclude>-->
                             <filesExclude>logging.json</filesExclude>
                             <filesExclude>logging-stdout.json</filesExclude>
                             <filesExclude>app.json</filesExclude>
@@ -165,7 +165,7 @@
                             <classifier>docker</classifier>
                             <filesInclude>**/*.json</filesInclude>
                             <filesExclude>scripting/scripting-thymeleaf.json</filesExclude>
-                            <filesExclude>aws.json</filesExclude>
+<!--                            <filesExclude>aws.json</filesExclude>-->
                             <filesExclude>logging.json</filesExclude>
                             <filesExclude>logging-stdout.json</filesExclude>
                             <filesExclude>applocal.json</filesExclude>
